@@ -193,6 +193,15 @@ section.block + section.block{border-top:1px solid var(--line)}
 .feat li{display:flex;gap:9px;align-items:flex-start}
 .feat li::before{content:"";width:16px;height:16px;flex:none;margin-top:3px;border-radius:50%;background:var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' fill='none' stroke='%230436B1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
 .app .chips{margin-top:auto;padding-top:6px}
+.more-h{margin-top:56px;font-size:22px;font-weight:800}
+.more{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:20px}
+.more .app-body{border-top:0}
+.more .sic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.more .sic svg{width:23px;height:23px}
+.more h3{font-size:19px}
+.more p.desc{font-size:14.5px;color:var(--muted)}
+@media (max-width:980px){.more{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:680px){.more{grid-template-columns:1fr}}
 .note-ill{margin-top:16px;font:12px var(--f-mono);color:var(--muted)}
 
 /* Réalisations */
@@ -324,7 +333,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="facts">
           <div><b>7 ans</b><span>d'expérience terrain</span></div>
           <div><b>6</b><span>sites raccordés en Ubiquiti</span></div>
-          <div><b>3</b><span>applications en service</span></div>
+          <div><b>7</b><span>applications conçues</span></div>
           <div><b>7</b><span>certificats et attestations</span></div>
         </div>
       </div>
@@ -420,8 +429,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   <section class="block" id="applications">
     <div class="wrap">
       <div class="sec-head">
-        <div><div class="eyebrow">Applications</div><h2>Trois applications conçues et en service</h2></div>
-        <p>Développées sous Android Studio, en français et en anglais, avec les données conservées sur le téléphone.</p>
+        <div><div class="eyebrow">Applications</div><h2>Des applications conçues pour le terrain</h2></div>
+        <p>Applications mobiles, Windows et web, pensées pour fonctionner hors ligne et pour les usages locaux : budget, planning, école.</p>
       </div>
       <div class="apps">
         <article class="app">
@@ -496,6 +505,37 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         </article>
       </div>
       <p class="note-ill">Écrans illustratifs avec des données d'exemple.</p>
+      <h3 class="more-h">Autres applications</h3>
+      <div class="more">
+        <article class="app"><div class="app-body">
+          <span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5a2 2 0 012-2h2l1.5-2h6l1.5 2h2a2 2 0 012 2V18a2 2 0 01-2 2h-13a2 2 0 01-2-2z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+          <h3>Scolarys ID Photo</h3>
+          <p class="tag">Photos d'identité des élèves</p>
+          <p class="desc">Application Windows pour réaliser les photos d'identité des élèves d'un établissement.</p>
+          <ul class="chips"><li>Windows</li><li>Écoles</li></ul>
+        </div></article>
+        <article class="app"><div class="app-body">
+          <span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5L12 4l9.5 4.5L12 13z"/><path d="M6.5 10.5v5c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3v-5M21.5 8.5v6"/></svg></span>
+          <h3>Lycée Software</h3>
+          <p class="tag">Gestion d'un lycée</p>
+          <p class="desc">Logiciel de gestion d'établissement, avec un module de conseil de classe réservé au proviseur.</p>
+          <ul class="chips"><li>Gestion scolaire</li><li>Conseil de classe</li></ul>
+        </div></article>
+        <article class="app"><div class="app-body">
+          <span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l18-8-6 16-3-7z"/><path d="M12 14l9-9"/></svg></span>
+          <h3>GS Envol</h3>
+          <p class="tag">Application multiplateforme</p>
+          <p class="desc">Application développée avec Flutter, utilisable hors ligne sur Android, Windows et le web.</p>
+          <ul class="chips"><li>Flutter</li><li>Android</li><li>Windows</li><li>Web</li></ul>
+        </div></article>
+        <article class="app"><div class="app-body">
+          <span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="16.5" rx="2"/><path d="M8 2.5v3M16 2.5v3M8 13l2.5 2.5L16 10"/></svg></span>
+          <h3>Leader's Habits</h3>
+          <p class="tag">Application Android</p>
+          <p class="desc">Application mobile autour des habitudes des leaders.</p>
+          <ul class="chips"><li>Android</li></ul>
+        </div></article>
+      </div>
     </div>
   </section>
 
